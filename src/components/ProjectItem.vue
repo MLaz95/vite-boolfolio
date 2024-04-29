@@ -9,11 +9,15 @@ export default {
 </script>
 
 <template>
-  <div class="card">
-    <h2>
-      {{ project.name }}
-    </h2>
-  </div>
+
+    <div class="col-6">
+        <div class="card">
+          <h2 class="text-center py-4">
+            Progetto: {{ project.name }}
+          </h2>
+        </div>
+    </div>
+
 </template>
 
 <style scoped></style>

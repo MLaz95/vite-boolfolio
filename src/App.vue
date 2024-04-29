@@ -32,9 +32,20 @@ export default {
 
 <template>
   <div class="container py-5">
-    <h1>Projects</h1>
-    <ProjectItem v-for="project in projects" :project="project"></ProjectItem>
+
+    <h1 class="mb-5 text-center">
+      Projects
+    </h1>
+
+    <div class="row row-gap-4">
+      <ProjectItem 
+        v-for="project in projects" 
+        :project="project">
+      </ProjectItem>
+    </div>
+
   </div>
+
 </template>
 
 <style scoped></style>
