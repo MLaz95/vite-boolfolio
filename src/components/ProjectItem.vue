@@ -1,23 +1,19 @@
 <script>
 export default {
+  name: "ProjectItem",
 
-    name: 'ProjectItem',
-
-    props : {
-        project: Object,
-    }
-}
-
+  props: {
+    project: Object,
+  },
+};
 </script>
 
 <template>
-<div class="card">
+  <div class="card">
     <h2>
-        {{ project.name }}
+      {{ project.name }}
     </h2>
-</div>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

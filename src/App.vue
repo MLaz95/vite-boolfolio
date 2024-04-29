@@ -1,7 +1,12 @@
 <script>
 import axios from "axios";
+import ProjectItem from "./components/ProjectItem.vue";
 
 export default {
+  components: {
+    ProjectItem,
+  },
+
   data() {
     return {
       projects: [],
@@ -28,11 +33,7 @@ export default {
 <template>
   <div class="container py-5">
     <h1>Projects</h1>
-    <ul>
-      <li v-for="project in projects">
-        {{ project.name }}
-      </li>
-    </ul>
+    <ProjectItem v-for="project in projects" :project="project"></ProjectItem>
   </div>
 </template>
 
