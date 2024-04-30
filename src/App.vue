@@ -1,12 +1,5 @@
 <script>
-import axios from "axios";
-import ProjectItem from "./components/ProjectItem.vue";
-
 export default {
-  components: {
-    ProjectItem,
-  },
-
   data() {
     return {};
   },

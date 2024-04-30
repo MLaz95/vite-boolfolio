@@ -1,8 +1,14 @@
 <script>
 import axios from "axios";
+
+import ProjectItem from "../components/ProjectItem.vue";
 export default {
   // name of the page
   name: "HomePage",
+
+  components: {
+    ProjectItem,
+  },
 
   data() {
     return {
