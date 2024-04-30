@@ -13,11 +13,18 @@ export default {
 
     <div class="col-6">
         
-        <div class="card h-100">
+        <div class="card h-100 px-3">
 
             <h2 class="text-center py-4">
             Progetto: {{ project.name }}
             </h2>
+
+            <div class="d-flex justify-content-between">
+                <h3 v-if="project.type">{{ project.type.title }}</h3>
+                <div v-if="project.technologies">
+                    <span v-for="tech in project.technologies" class="badge rounded-pill">{{ tech.title }}</span>
+                </div>
+            </div>
 
             <div class="info text-center">
 
@@ -37,5 +44,4 @@ export default {
 </template>
 
 <style scoped>
-
 </style>
