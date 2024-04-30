@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="col-6">
     <router-link
-      :to="{ name: 'single-project', params: { id: project.id } }"
+      :to="{ name: 'single-project', params: { slug: project.slug } }"
       class="text-decoration-none"
     >
       <div class="my_card card h-100 px-3">
