@@ -6,42 +6,42 @@ export default {
     project: Object,
   },
 };
-
 </script>
 
 <template>
+  <div class="col-6">
+    <router-link
+      :to="{ name: 'single-project', params: { id: project.id } }"
+      class="text-decoration-none"
+    >
+      <div class="card h-100 px-3">
+        <h2 class="text-center py-4">
+          {{ project.name }}
+        </h2>
 
-    <div class="col-6">
-        
-        <div class="card h-100 px-3">
-
-            <h2 class="text-center py-4">
-            Progetto: {{ project.name }}
-            </h2>
-
-            <div class="d-flex justify-content-between">
-                <h3 v-if="project.type">{{ project.type.title }}</h3>
-                <div v-if="project.technologies">
-                    <span v-for="tech in project.technologies" class="badge rounded-pill">{{ tech.title }}</span>
-                </div>
-            </div>
-
-            <div class="info text-center">
-
-                <p>
-                    {{ project.description }}
-                </p>
-
-                <p>
-                    {{ project.github }}
-                </p>
-                
-            </div>
-            
+        <div class="d-flex justify-content-between">
+          <h3 v-if="project.type">{{ project.type.title }}</h3>
+          <div v-if="project.technologies">
+            <span
+              v-for="tech in project.technologies"
+              class="badge rounded-pill"
+              >{{ tech.title }}</span
+            >
+          </div>
         </div>
-    </div>
 
+        <div class="info text-center">
+          <p>
+            {{ project.description }}
+          </p>
+
+          <p>
+            {{ project.github }}
+          </p>
+        </div>
+      </div>
+    </router-link>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
