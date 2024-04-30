@@ -71,6 +71,9 @@ export default {
 
     <div class="row row-gap-4">
       <ProjectItem v-for="project in projects.data" :project="project">
+        <router-link
+          :to="{ name: 'single-project', params: { id: project.id } }"
+        ></router-link>
       </ProjectItem>
     </div>
 
