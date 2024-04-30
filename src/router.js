@@ -1,26 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
-import HomePage from './pages/HomePage.vue';
-import SingleProject from './pages/SingleProject.vue';
+import HomePage from "./pages/HomePage.vue";
+import SingleProject from "./pages/SingleProject.vue";
 
-const router = createRouter ({
+const router = createRouter({
+  history: createWebHistory(),
 
-    history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: HomePage,
+    },
 
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: HomePage
-        },
-
-        {
-            path: '/projects/:id',
-            name: 'single-project',
-            component: SingleProject
-        },
-    ]
-
-})
+    {
+      path: "/projects/:slug",
+      name: "single-project",
+      component: SingleProject,
+    },
+  ],
+});
 
 export { router };
