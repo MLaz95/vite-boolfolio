@@ -18,7 +18,7 @@
 
             axios.get(this.baseApiUrl + 'projects/' + this.projectId).then(res =>{
                 console.log(res);
-                this.project = res.data.post;
+                this.project = res.data.project;
             })
         }
     }
@@ -28,7 +28,7 @@
 <template>
 
     <div v-if="project">
-        <h2>{{ project.title }}</h2>
+        <h2>{{ project.name }}</h2>
         <p>{{ project.description }}</p>
     </div>
 
