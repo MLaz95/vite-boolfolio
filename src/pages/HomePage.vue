@@ -75,7 +75,7 @@ export default {
     </div>
 
     <div>
-      <ul class="d-flex gap-3 py-5">
+      <ul class="d-flex gap-2 py-5 justify-content-center">
         <li
           v-for="link in apiLinks"
           v-html="link.label"
@@ -86,8 +86,21 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 ul {
   list-style: none;
+
+  li {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition: all .2s ease;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
 }
 </style>

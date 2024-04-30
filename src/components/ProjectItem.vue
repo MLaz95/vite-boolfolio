@@ -14,7 +14,7 @@ export default {
       :to="{ name: 'single-project', params: { id: project.id } }"
       class="text-decoration-none"
     >
-      <div class="card h-100 px-3">
+      <div class="my_card card h-100 px-3">
         <h2 class="text-center py-4">
           {{ project.name }}
         </h2>
@@ -44,4 +44,16 @@ export default {
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+  .my_card {
+
+    transition: all .2s ease;
+
+    &:hover {
+      position: relative;
+      transform: scale(1.05);
+      background-color: white;
+      color: black;
+    }
+  }
+</style>
