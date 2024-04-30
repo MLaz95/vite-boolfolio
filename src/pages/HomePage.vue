@@ -66,7 +66,6 @@ export default {
 </script>
 
 <template>
-  <div class="container py-5">
     <h1 class="mb-5 text-center">Projects</h1>
 
     <div class="row row-gap-4">
@@ -80,10 +79,10 @@ export default {
           v-for="link in apiLinks"
           v-html="link.label"
           @click="changePage(link.label)"
+          :class="link.label == apiPageNumber ? 'active' : ''"
         ></li>
       </ul>
     </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -98,6 +97,11 @@ ul {
     transition: all .2s ease;
 
     &:hover {
+      background-color: white;
+      color: black;
+    }
+
+    &.active {
       background-color: white;
       color: black;
     }
