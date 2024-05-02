@@ -28,19 +28,19 @@ export default {
   <div v-if="project">
     <div class="container">
 
-      <h2 class="text-center mb-3">{{ project.name }}</h2>
+      <h2 class="text-center mb-5">Project: <span class="fw-bold">{{ project.name }}</span></h2>
   
       <div class="text-center">
   
         <img 
           v-if="project.cover" 
-          class="img-fluid"
+          class="img-fluid mb-2"
           :src="'http://localhost:8000/storage/' + project.cover" 
           :alt="'project ' + project.name + ' thumbnail'"
           >
         <img 
           v-else 
-          class="img-fluid"
+          class="img-fluid mb-2"
           src="/img/project-img-placeholder.png" 
           :alt="'project ' + project.name + ' thumbnail'"
         >
@@ -61,14 +61,14 @@ export default {
               <th scope="row" class="d-none d-md-table-cell text-nowrap">
                   Project Type:
               </th>
-              <td v-if="project.type">
+              <td>
                   <h5 class="d-block d-md-none">
                       Project Type:
                   </h5>
-                  <div class="ps-2 ps-md-0">{{project.type.title}}</div>
+                  <div class="ps-2 ps-md-0"><span  v-if="project.type">{{project.type.title}}</span></div>
               </td>
             </tr>
-            <tr v-if="project.technologies">
+            <tr>
               <th scope="row" class="d-none d-md-table-cell text-nowrap">
                   Technologies:
               </th>

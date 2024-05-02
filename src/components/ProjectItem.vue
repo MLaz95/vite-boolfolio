@@ -48,10 +48,6 @@ export default {
             <p>
               {{ project.description }}
             </p>
-  
-            <p>
-              {{ project.github }}
-            </p>
           </div>
         </div>
       </div>
