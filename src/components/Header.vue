@@ -28,11 +28,11 @@ export default {
 <template>
   <header>
     <nav
-      class="navbar navbar fixed-top navbar-expand-lg bg-transparent my-nav"
-      :class="changeColor == true ? 'bg-white' : ''"
+      class="navbar navbar fixed-top navbar-expand-lg my-nav"
+      :class="changeColor == true ? 'scrolled' : ''"
     >
-      <div class="container-fluid d-flex align-items-center">
-        <a class="navbar-brand" href="#">Navbar</a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Portfolio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -44,16 +44,13 @@ export default {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse d-flex justify-content-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Progetti</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -74,20 +71,17 @@ export default {
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
           </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn" type="submit">Search</button>
+          </form>
         </div>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </nav>
     <div
@@ -99,13 +93,16 @@ export default {
 </template>
 
 <style lang="scss">
+.navbar-brand {
+  width: 285.62px;
+}
+.scrolled {
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
 .my-nav {
   padding: 20px;
-
-  .scrolled {
-    background: red !important;
-  }
-
+  transition: 0.3s ease-in-out;
   .nav-item {
     font-size: 1.3em;
   }
@@ -114,5 +111,9 @@ export default {
   height: 400px;
   background-image: url("/public/img/wallpaper-header.jpg");
   background-size: cover;
+
+  h1 {
+    text-shadow: 3px 3px 2px black;
+  }
 }
 </style>
