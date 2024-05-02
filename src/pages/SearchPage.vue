@@ -20,17 +20,15 @@ export default {
 
       baseApiUrl: "http://127.0.0.1:8000/api/",
 
-      per_page: "",
+      per_page: 1,
 
-      last_page: "",
+      last_page: 1,
 
-      total_items: "",
+      total_items: 1,
     };
   },
 
-  methods: {
-
-  },
+  methods: {},
 
   mounted() {
     this.query = this.$route.params.query;
