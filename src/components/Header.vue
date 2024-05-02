@@ -4,7 +4,7 @@ export default {
     return {
       scrollPosition: 0,
       changeColor: false,
-      searchInput: '',
+      searchInput: "",
     };
   },
 
@@ -23,10 +23,11 @@ export default {
       }
     },
 
-    search(searchInput){
+    search(searchInput) {
       // this.$router.push({name: 'search', params: {query: searchInput}})
-      window.location.href = 'http://localhost:5173/projects/search/' + this.searchInput
-    }
+      window.location.href =
+        "http://localhost:5173/projects/search/" + this.searchInput;
+    },
   },
 };
 </script>
@@ -37,7 +38,7 @@ export default {
       class="navbar navbar fixed-top navbar-expand-lg my-nav"
       :class="changeColor == true ? 'scrolled' : ''"
     >
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#">Portfolio</a>
         <button
           class="navbar-toggler"
@@ -79,17 +80,17 @@ export default {
             </li>
           </ul>
           <!-- <form class="" role="search"> -->
-            <div class="searchbar d-flex">
-              <input
-                class="search_input"
-                type="text"
-                name=""
-                placeholder="Search..."
-                v-model="searchInput"
-                @keyup.enter="search(searchInput)"
-              />
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-            </div>
+          <div class="searchbar d-flex">
+            <input
+              class="search_input"
+              type="text"
+              name=""
+              placeholder="Search..."
+              v-model="searchInput"
+              @keyup.enter="search(searchInput)"
+            />
+            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+          </div>
           <!-- </form> -->
         </div>
       </div>
