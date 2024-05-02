@@ -5,7 +5,10 @@ export default {
     Header,
   },
   data() {
-    return {};
+    return {
+      changeColor: false,
+      scrollPosition: null,
+    };
   },
 
   methods: {},
