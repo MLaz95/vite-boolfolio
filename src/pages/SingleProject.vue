@@ -76,7 +76,8 @@ export default {
                   <h5 class="d-block d-md-none">
                       Technologies:
                   </h5>
-                  <span v-for="tech in project.technologies" class="badge rounded-pill fs-6">{{ tech.title }}</span>
+                  <img v-for="tech in project.technologies" :src="'/img/tech-logos/' + tech.title + '.png'"
+                  class="tech-thumb">
               </td>
             </tr>
             <tr>
@@ -101,5 +102,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.tech-thumb {
+      height: 30px;
+    }
 </style>
