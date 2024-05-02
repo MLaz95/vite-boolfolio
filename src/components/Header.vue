@@ -75,7 +75,7 @@ export default {
           <form class="d-flex" role="search">
             <div class="searchbar">
               <input
-                class="search_input form-control"
+                class="search_input"
                 type="text"
                 name=""
                 placeholder="Search..."
@@ -128,7 +128,6 @@ export default {
 }
 
 .search_input {
-  color: white;
   border: 0;
   outline: 0;
   background: none;
