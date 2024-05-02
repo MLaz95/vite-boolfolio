@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "./pages/HomePage.vue";
 import SingleProject from "./pages/SingleProject.vue";
+import SearchPage from "./pages/SearchPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -18,6 +19,12 @@ const router = createRouter({
       name: "single-project",
       component: SingleProject,
     },
+
+    {
+      path: "/projects/search/:query",
+      name: "search",
+      component: SearchPage,
+    }
   ],
 });
 
