@@ -26,10 +26,80 @@ export default {
 
 <template>
   <div v-if="project">
-    <h2>{{ project.name }}</h2>
-    <p>{{ project.description }}</p>
-    <img :src="'http://localhost:8000/storage/' + project.cover" alt="">
+    <div class="container">
+
+      <h2 class="text-center mb-3">{{ project.name }}</h2>
+  
+      <div class="text-center">
+  
+        <img 
+          v-if="project.cover" 
+          class="img-fluid"
+          :src="'http://localhost:8000/storage/' + project.cover" 
+          :alt="'project ' + project.name + ' thumbnail'"
+          >
+        <img 
+          v-else 
+          class="img-fluid"
+          src="/img/project-img-placeholder.png" 
+          :alt="'project ' + project.name + ' thumbnail'"
+        >
+        <table class="table w-100 mx-auto text-start">
+          <tbody>
+            <tr>
+              <th scope="row" class="d-none d-md-table-cell text-nowrap">
+                  Description:
+              </th>
+              <td>
+                  <h5 class="d-block d-md-none">
+                      Description:
+                  </h5>
+                  <div class="ps-2 ps-md-0">{{project.description}}</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="d-none d-md-table-cell text-nowrap">
+                  Project Type:
+              </th>
+              <td v-if="project.type">
+                  <h5 class="d-block d-md-none">
+                      Project Type:
+                  </h5>
+                  <div class="ps-2 ps-md-0">{{project.type.title}}</div>
+              </td>
+            </tr>
+            <tr v-if="project.technologies">
+              <th scope="row" class="d-none d-md-table-cell text-nowrap">
+                  Technologies:
+              </th>
+              <td>
+                  <h5 class="d-block d-md-none">
+                      Technologies:
+                  </h5>
+                  <span v-for="tech in project.technologies" class="badge rounded-pill fs-6">{{ tech.title }}</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="d-none d-md-table-cell text-nowrap">
+                  Github Link:
+              </th>
+              <td>
+                  <h5 class="d-block d-md-none">
+                      GitHub Links:
+                  </h5>
+                  <a class="text-white text-break" href="#">
+                    <div class="ps-2 ps-md-0">{{project.github}}</div>
+                  </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+
+</style>
