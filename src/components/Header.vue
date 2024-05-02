@@ -108,11 +108,11 @@ export default {
   }
 }
 .jumbotron {
-  height: 400px;
-  background-image: url("/public/img/wallpaper-header.jpg");
+  height: 500px;
   background-size: cover;
 
   h1 {
+    font-size: 3em;
     text-shadow: 3px 3px 2px black;
   }
 }
