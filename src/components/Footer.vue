@@ -31,6 +31,11 @@ export default {
             </div>
 
             <div>
+                <ul class="d-flex align-items-center">
+                    <li><a href="#!"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
                 
             </div>
         </div>
