@@ -18,7 +18,7 @@ export default {
         <h2 class="text-center py-4">
           {{ project.name }}
         </h2>
-        <img src="" />
+        <img :src="'http://localhost:8000/storage/' + project.cover" alt="">
         <div class="d-flex justify-content-between">
           <h3 v-if="project.type">{{ project.type.title }}</h3>
           <div v-if="project.technologies">
