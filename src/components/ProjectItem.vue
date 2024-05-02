@@ -9,38 +9,39 @@ export default {
 </script>
 
 <template>
-  <div class="col-12 col-md-6 col-xl-3 pb-5">
+  <div class="col-12 col-md-6 col-xl-3">
     <router-link
       :to="{ name: 'single-project', params: { slug: project.slug } }"
       class="text-decoration-none"
     >
-      <div class="my_card card px-3 pt-3 h-100">
-
-        <img 
-          v-if="project.cover" 
-          :src="'http://localhost:8000/storage/' + project.cover" 
+      <div class="my_card card px-3 pt-3">
+        <img
+          v-if="project.cover"
+          :src="'http://localhost:8000/storage/' + project.cover"
           :alt="'project ' + project.name + ' thumbnail'"
-        >
-        <img 
-          v-else 
-          src="/img/project-img-placeholder.png" 
+        />
+        <img
+          v-else
+          src="/img/project-img-placeholder.svg"
           :alt="'project ' + project.name + ' thumbnail'"
-        >
+        />
 
-        <h2 class="text-center py-2">
+        <h2 class="text-center py-4">
           {{ project.name }}
         </h2>
 
         <div class="details">
-          
-          <div v-if="project.technologies" class="d-flex justify-content-center pb-2 gap-2">
-            <img
-              v-for="tech in project.technologies"
-              :src="'/img/tech-logos/' + tech.title + '.png'"
-              class="tech-thumb"
-            >
+          <div class="d-flex justify-content-between">
+            <h3 v-if="project.type">{{ project.type.title }}</h3>
+            <div v-if="project.technologies">
+              <span
+                v-for="tech in project.technologies"
+                class="badge rounded-pill text-black"
+                >{{ tech.title }}</span
+              >
+            </div>
           </div>
-  
+
           <div class="info text-center">
             <p>
               {{ project.description }}
@@ -58,7 +59,8 @@ export default {
 
   &:hover {
     position: relative;
-    background-color: rgb(207, 207, 207);
+    transform: scale(1.05);
+    background-color: white;
     color: black;
   }
 
@@ -67,9 +69,12 @@ export default {
     object-fit: cover;
   }
 
-  .tech-thumb {
-    height: 30px;
+  .details {
+    display: none;
   }
-  
+
+  &:hover .details {
+    display: block;
+  }
 }
 </style>
