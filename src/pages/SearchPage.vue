@@ -39,7 +39,10 @@ export default {
       console.log(res);
       this.projects = res.data.results;
     });
+
+    console.log(this.$route.params)
   },
+
 };
 </script>
 

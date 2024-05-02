@@ -11,12 +11,16 @@ export default {
     return {
       changeColor: false,
       scrollPosition: null,
+      currentQuery: '',
+      currentQueryResults: null,
     };
   },
 
-  methods: {},
+  methods: {
 
-  mounted() {},
+  },
+
+  mounted() { },
 };
 </script>
 

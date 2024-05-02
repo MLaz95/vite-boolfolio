@@ -4,6 +4,7 @@ export default {
     return {
       scrollPosition: 0,
       changeColor: false,
+      searchInput: '',
     };
   },
 
@@ -21,6 +22,11 @@ export default {
         this.changeColor = false;
       }
     },
+
+    search(searchInput){
+      // this.$router.push({name: 'search', params: {query: searchInput}})
+      window.location.href = 'http://localhost:5173/projects/search/' + this.searchInput
+    }
   },
 };
 </script>
@@ -72,17 +78,19 @@ export default {
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <div class="searchbar">
+          <!-- <form class="" role="search"> -->
+            <div class="searchbar d-flex">
               <input
                 class="search_input"
                 type="text"
                 name=""
                 placeholder="Search..."
+                v-model="searchInput"
+                @keyup.enter="search(searchInput)"
               />
               <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
             </div>
-          </form>
+          <!-- </form> -->
         </div>
       </div>
     </nav>
