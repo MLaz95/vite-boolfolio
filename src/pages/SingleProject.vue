@@ -28,6 +28,7 @@ export default {
   <div v-if="project">
     <h2>{{ project.name }}</h2>
     <p>{{ project.description }}</p>
+    <img :src="'http://localhost:8000/storage/' + project.cover" alt="">
   </div>
 </template>
 
