@@ -20,11 +20,11 @@ export default {
 
       baseApiUrl: "http://127.0.0.1:8000/api/",
 
-      per_page: "",
+      per_page: 1,
 
-      last_page: "",
+      last_page: 1,
 
-      total_items: "",
+      total_items: 1,
     };
   },
 
@@ -75,8 +75,6 @@ export default {
 </script>
 
 <template>
-  <h1 class="mb-5 text-center">Projects</h1>
-
   <div class="row row-gap-4">
     <ProjectItem v-for="project in projects.data" :project="project">
     </ProjectItem>
