@@ -22,7 +22,7 @@ export default {
         />
         <img
           v-else
-          src="/img/project-img-placeholder.svg"
+          src="/img/project-img-placeholder.jpg"
           :alt="'project ' + project.name + ' thumbnail'"
         />
 

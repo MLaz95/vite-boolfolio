@@ -75,21 +75,23 @@ export default {
 </script>
 
 <template>
-  <div class="row row-gap-4">
+  <div class="row row-gap-4 p-5">
     <ProjectItem v-for="project in projects.data" :project="project">
     </ProjectItem>
   </div>
 
-  <vue-awesome-paginate
-    :total-items="total_items"
-    v-model="apiPageNumber"
-    :items-per-page="per_page"
-    :max-pages-shown="last_page"
-    :on-click="changePage"
-    :hide-prev-next-when-ends="true"
-    paginate-buttons-class="btn-vue"
-    active-page-class="btn-active"
-  />
+  <div class="d-flex justify-content-center">
+    <vue-awesome-paginate
+      :total-items="total_items"
+      v-model="apiPageNumber"
+      :items-per-page="per_page"
+      :max-pages-shown="last_page"
+      :on-click="changePage"
+      :hide-prev-next-when-ends="true"
+      paginate-buttons-class="btn-vue"
+      active-page-class="btn-active"
+    />
+  </div>
 </template>
 
 <style lang="scss">
