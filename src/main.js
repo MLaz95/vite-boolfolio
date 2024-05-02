@@ -1,8 +1,14 @@
-import { createApp } from 'vue'
-import './style.scss'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.scss";
+import App from "./App.vue";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import { router } from './router.js';
+import { router } from "./router.js";
 
-createApp(App).use(router).mount('#app')
+// import the package
+import VueAwesomePaginate from "vue-awesome-paginate";
+
+// import the necessary css file
+import "vue-awesome-paginate/dist/style.css";
+
+createApp(App).use(router).use(VueAwesomePaginate).mount("#app");

@@ -18,7 +18,7 @@ export default {
         <h2 class="text-center py-4">
           {{ project.name }}
         </h2>
-
+        <img src="" />
         <div class="d-flex justify-content-between">
           <h3 v-if="project.type">{{ project.type.title }}</h3>
           <div v-if="project.technologies">
@@ -45,15 +45,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  .my_card {
+.my_card {
+  transition: all 0.2s ease;
 
-    transition: all .2s ease;
-
-    &:hover {
-      position: relative;
-      transform: scale(1.05);
-      background-color: white;
-      color: black;
-    }
+  &:hover {
+    position: relative;
+    transform: scale(1.05);
+    background-color: white;
+    color: black;
   }
+}
 </style>
