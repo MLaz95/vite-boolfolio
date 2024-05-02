@@ -71,6 +71,8 @@
 
 <style>
 .jumbotron {
-  height: 300px;
+  height: 400px;
+  background-image: url("/public/img/wallpaper-header.jpg");
+  background-size: cover;
 }
 </style>
