@@ -40,20 +40,35 @@ export default {
     >
       <div class="container">
         <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
             <li class="nav-item">
-              <router-link :to="{name: 'home'}" class="nav-link text-white" >Home</router-link>
+              <router-link :to="{ name: 'home' }" class="nav-link text-white"
+                >Home</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Progetti</a>
+              <router-link :to="{ name: 'home' }" class="nav-link text-white"
+                >Progetti</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link :to="{name: 'contact-us'}" class="nav-link text-white" >Contattaci</router-link>
+              <router-link
+                :to="{ name: 'contact-us' }"
+                class="nav-link text-white"
+                >Contattaci</router-link
+              >
             </li>
           </ul>
           <!-- <form class="" role="search"> -->
@@ -79,17 +94,21 @@ export default {
 </template>
 
 <style lang="scss">
+@use "/src/styles/variables" as *;
 .navbar-brand {
-  width: 150px;
+  width: 100px;
+  color: white;
 }
 
+.nav-item:hover {
+  color: $tertiaryColor;
+}
 
 .my-nav {
   padding: 20px;
   transition: 0.3s ease-in-out;
-  background-image: linear-gradient(#082032, #2C394B);
+  background-image: linear-gradient(#082032, #2c394b);
 
-  
   &.scrolled {
     background-color: red;
     transition: 0.3s ease-in-out;
@@ -98,15 +117,14 @@ export default {
     font-size: 1.3em;
   }
 
-  li{
+  li {
     color: white;
   }
-
 }
 
 :root {
   --steps: 8; // Char count
-  --background: #2C394B;
+  --background: #2c394b;
 }
 
 .jumbotron {
@@ -143,14 +161,14 @@ export default {
   transition: width 0.4s linear;
 }
 
-.searchbar:hover>.search_input {
+.searchbar:hover > .search_input {
   padding: 0 10px;
   width: 300px;
   caret-color: red;
   transition: width 0.4s linear;
 }
 
-.searchbar:hover>.search_icon {
+.searchbar:hover > .search_icon {
   background: white;
   color: #e74c3c;
 }
@@ -169,27 +187,30 @@ export default {
 
 .typing {
   // Text style
-  font-family: 'Inconsolata', Consolas, monospace;
-	font-size: 6vw;
-	color: #FF4C29;
+  font-family: "Inconsolata", Consolas, monospace;
+  font-size: 6vw;
+  color: #ff4c29;
   // Core styles
   position: relative;
-	&::after {
+  &::after {
     content: "|";
     position: absolute;
     right: 0;
     width: 100%;
     color: white;
     background: var(--background);
-    animation: typing 4s steps(var(--steps)) forwards,
-      caret 1s infinite;
+    animation: typing 4s steps(var(--steps)) forwards, caret 1s infinite;
   }
 }
 // Animation
 @keyframes typing {
-	to { width: 0 }
+  to {
+    width: 0;
+  }
 }
 @keyframes caret {
-	50% { color: transparent }
+  50% {
+    color: transparent;
+  }
 }
 </style>
