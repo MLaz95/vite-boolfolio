@@ -51,16 +51,18 @@ export default {
     </ProjectItem>
   </div>
 
-  <vue-awesome-paginate
-    :total-items="total_items"
-    v-model="apiPageNumber"
-    :items-per-page="per_page"
-    :max-pages-shown="last_page"
-    :on-click="changePage"
-    :hide-prev-next-when-ends="true"
-    paginate-buttons-class="btn-vue"
-    active-page-class="btn-active"
-  />
+  <div class="pagination-container d-flex justify-content-center">
+    <vue-awesome-paginate
+      :total-items="total_items"
+      v-model="apiPageNumber"
+      :items-per-page="per_page"
+      :max-pages-shown="last_page"
+      :on-click="changePage"
+      :hide-prev-next-when-ends="true"
+      paginate-buttons-class="btn-vue"
+      active-page-class="btn-active"
+    />
+  </div>
 </template>
 
 <style lang="scss">
