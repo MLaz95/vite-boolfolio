@@ -15,6 +15,7 @@ export default {
       class="text-decoration-none"
     >
       <div class="my_card card px-3 pt-3 h-100">
+
         <img
           v-if="project.cover"
           :src="'http://localhost:8000/storage/' + project.cover"
@@ -24,6 +25,7 @@ export default {
           v-else
           src="/img/project-img-placeholder.jpg"
           :alt="'project ' + project.name + ' thumbnail'"
+          class="rounded-1"
         />
 
         <h2 class="text-center py-4">
@@ -62,11 +64,15 @@ export default {
 
 .my_card {
   transition: all 0.2s ease;
+  background-color: transparent;
+  color: white;
+  border-color: $quaternaryColor;
+  // border-radius: 0;
 
   &:hover {
     position: relative;
-    background-color: $quaternaryColor;
-    color: black;
+    background-color: $primaryColor;
+    color: $quaternaryColor;
   }
 
   img {

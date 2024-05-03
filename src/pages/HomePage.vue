@@ -75,7 +75,7 @@ export default {
 </script>
 
 <template>
-  <div class="row row-gap-4 mb-3">
+  <div class="row row-gap-5 mb-5">
     <ProjectItem v-for="project in projects.data" :project="project">
     </ProjectItem>
   </div>
