@@ -45,15 +45,15 @@ export default {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
             <li class="nav-item">
-              <router-link :to="{name: 'home'}" class="nav-link" >Home</router-link>
+              <router-link :to="{name: 'home'}" class="nav-link text-white" >Home</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Progetti</a>
+              <a class="nav-link text-white" href="#">Progetti</a>
             </li>
             <li class="nav-item">
-              <router-link :to="{name: 'contact-us'}" class="nav-link" >Contattaci</router-link>
+              <router-link :to="{name: 'contact-us'}" class="nav-link text-white" >Contattaci</router-link>
             </li>
           </ul>
           <!-- <form class="" role="search"> -->
@@ -72,8 +72,8 @@ export default {
         </div>
       </div>
     </nav>
-    <div class="jumbotron bg-body-secondary d-flex align-items-center justify-content-center">
-      <h1 class="text-center m-0">PROJECTS</h1>
+    <div class="jumbotron">
+      <h1 class="typing">projects</h1>
     </div>
   </header>
 </template>
@@ -83,24 +83,40 @@ export default {
   width: 285.62px;
 }
 
-.scrolled {
-  background-color: red;
-  transition: 0.3s ease-in-out;
-}
 
 .my-nav {
   padding: 20px;
   transition: 0.3s ease-in-out;
+  background-image: linear-gradient(#082032, #2C394B);
 
+  
+  &.scrolled {
+    background-color: red;
+    transition: 0.3s ease-in-out;
+  }
   .nav-item {
     font-size: 1.3em;
   }
 
+  li{
+    color: white;
+  }
+
+}
+
+:root {
+  --steps: 8; // Char count
+  --background: #2C394B;
 }
 
 .jumbotron {
-  height: 500px;
-  background-size: cover;
+  height: 300px;
+  // background-image: url(/public/img/wallpaper-header.jpg);
+  // background-size: cover;
+  display: grid;
+  place-content: center;
+  // min-height: 100vh;
+  background: var(--background);
 
   h1 {
     font-size: 3em;
@@ -129,7 +145,7 @@ export default {
 
 .searchbar:hover>.search_input {
   padding: 0 10px;
-  width: 450px;
+  width: 300px;
   caret-color: red;
   transition: width 0.4s linear;
 }
@@ -149,5 +165,31 @@ export default {
   border-radius: 50%;
   color: white;
   text-decoration: none;
+}
+
+.typing {
+  // Text style
+  font-family: 'Inconsolata', Consolas, monospace;
+	font-size: 6vw;
+	color: #FF4C29;
+  // Core styles
+  position: relative;
+	&::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: white;
+    background: var(--background);
+    animation: typing 4s steps(var(--steps)) forwards,
+      caret 1s infinite;
+  }
+}
+// Animation
+@keyframes typing {
+	to { width: 0 }
+}
+@keyframes caret {
+	50% { color: transparent }
 }
 </style>
