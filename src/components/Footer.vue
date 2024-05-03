@@ -27,6 +27,7 @@ export default {
                     <li><a href="#!">Emanuele Pogliari</a></li>
                     <li><a href="#!">Federico Viganò</a></li>
                     <li><a href="#!">Marco Lazzari</a></li>
+                    <li><router-link :to="{name: 'contact-us'}">Contattaci</router-link></li>
                 </ul>
             </div>
 
