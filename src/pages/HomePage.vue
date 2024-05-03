@@ -93,6 +93,7 @@ export default {
 </template>
 
 <style lang="scss">
+@use "../styles/variables" as *;
 .btn-vue {
   height: 40px;
   width: 40px;

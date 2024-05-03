@@ -38,9 +38,8 @@ export default {
       this.projects = res.data.results;
     });
 
-    console.log(this.$route.params)
+    console.log(this.$route.params);
   },
-
 };
 </script>
 
@@ -65,21 +64,5 @@ export default {
 </template>
 
 <style lang="scss">
-.btn-vue {
-  height: 40px;
-  width: 40px;
-  border: none;
-  margin-inline: 5px;
-  cursor: pointer;
-}
-.back-btn {
-  background-color: red;
-}
-.next-btn {
-  background-color: red;
-}
-.btn-active {
-  background-color: blue;
-  color: white;
-}
+@use "../styles/variables" as *;
 </style>
