@@ -9,7 +9,7 @@ export default {
         return {
             formData: {
                 name: '',
-                email: '',
+                address: '',
                 message: '',
             },
         };
@@ -39,7 +39,7 @@ export default {
 
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" v-model="formData.email">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" v-model="formData.address">
             <div id="emailHelp" class="form-text">Non condivideremo mai la tua mail con terzi</div>
         </div>
 
