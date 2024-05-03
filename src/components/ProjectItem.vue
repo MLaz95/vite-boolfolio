@@ -33,13 +33,20 @@ export default {
         <div class="details">
           <div class="d-flex justify-content-between">
             <h3 v-if="project.type">{{ project.type.title }}</h3>
-            <div v-if="project.technologies">
+            <!-- <div v-if="project.technologies">
               <span
                 v-for="tech in project.technologies"
                 class="badge rounded-pill text-black"
                 >{{ tech.title }}</span
               >
-            </div>
+            </div> -->
+            <div v-if="project.technologies" class="d-flex justify-content-center pb-2 gap-2">
+            <img
+              v-for="tech in project.technologies"
+              :src="'/img/tech-logos/' + tech.title + '.png'"
+              class="tech-thumb"
+            >
+          </div>
           </div>
 
           <div class="info text-center">
@@ -75,6 +82,10 @@ export default {
 
   &:hover .details {
     display: block;
+  }
+
+  .tech-thumb{
+    height: 30px;
   }
 }
 </style>
