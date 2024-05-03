@@ -40,43 +40,20 @@ export default {
     >
       <div class="container">
         <a class="navbar-brand" href="#">Portfolio</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <router-link :to="{name: 'home'}" class="nav-link" >Home</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Progetti</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <router-link :to="{name: 'contact-us'}" class="nav-link" >Contattaci</router-link>
             </li>
           </ul>
           <!-- <form class="" role="search"> -->
@@ -95,9 +72,7 @@ export default {
         </div>
       </div>
     </nav>
-    <div
-      class="jumbotron bg-body-secondary d-flex align-items-center justify-content-center"
-    >
+    <div class="jumbotron bg-body-secondary d-flex align-items-center justify-content-center">
       <h1 class="text-center m-0">PROJECTS</h1>
     </div>
   </header>
@@ -107,17 +82,22 @@ export default {
 .navbar-brand {
   width: 285.62px;
 }
+
 .scrolled {
   background-color: red;
   transition: 0.3s ease-in-out;
 }
+
 .my-nav {
   padding: 20px;
   transition: 0.3s ease-in-out;
+
   .nav-item {
     font-size: 1.3em;
   }
+
 }
+
 .jumbotron {
   height: 500px;
   background-size: cover;
@@ -127,6 +107,7 @@ export default {
     text-shadow: 3px 3px 2px black;
   }
 }
+
 .searchbar {
   margin-bottom: auto;
   margin-top: auto;
@@ -146,14 +127,14 @@ export default {
   transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_input {
+.searchbar:hover>.search_input {
   padding: 0 10px;
   width: 450px;
   caret-color: red;
   transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_icon {
+.searchbar:hover>.search_icon {
   background: white;
   color: #e74c3c;
 }
