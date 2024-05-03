@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss">
 .navbar-brand {
-  width: 285.62px;
+  width: 150px;
 }
 
 
@@ -110,7 +110,7 @@ export default {
 }
 
 .jumbotron {
-  height: 300px;
+  height: 250px;
   // background-image: url(/public/img/wallpaper-header.jpg);
   // background-size: cover;
   display: grid;
