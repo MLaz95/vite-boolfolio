@@ -38,9 +38,8 @@ export default {
       this.projects = res.data.results;
     });
 
-    console.log(this.$route.params)
+    console.log(this.$route.params);
   },
-
 };
 </script>
 
@@ -52,34 +51,20 @@ export default {
     </ProjectItem>
   </div>
 
-  <vue-awesome-paginate
-    :total-items="total_items"
-    v-model="apiPageNumber"
-    :items-per-page="per_page"
-    :max-pages-shown="last_page"
-    :on-click="changePage"
-    :hide-prev-next-when-ends="true"
-    paginate-buttons-class="btn-vue"
-    active-page-class="btn-active"
-  />
+  <div class="pagination-container d-flex justify-content-center">
+    <vue-awesome-paginate
+      :total-items="total_items"
+      v-model="apiPageNumber"
+      :items-per-page="per_page"
+      :max-pages-shown="last_page"
+      :on-click="changePage"
+      :hide-prev-next-when-ends="true"
+      paginate-buttons-class="btn-vue"
+      active-page-class="btn-active"
+    />
+  </div>
 </template>
 
 <style lang="scss">
-.btn-vue {
-  height: 40px;
-  width: 40px;
-  border: none;
-  margin-inline: 5px;
-  cursor: pointer;
-}
-.back-btn {
-  background-color: red;
-}
-.next-btn {
-  background-color: red;
-}
-.btn-active {
-  background-color: blue;
-  color: white;
-}
+@use "../styles/variables" as *;
 </style>

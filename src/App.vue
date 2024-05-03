@@ -5,22 +5,20 @@ import Footer from "./components/Footer.vue";
 export default {
   components: {
     Header,
-    Footer
+    Footer,
   },
   data() {
     return {
       changeColor: false,
       scrollPosition: null,
-      currentQuery: '',
+      currentQuery: "",
       currentQueryResults: null,
     };
   },
 
-  methods: {
+  methods: {},
 
-  },
-
-  mounted() { },
+  mounted() {},
 };
 </script>
 
@@ -32,8 +30,13 @@ export default {
   <Footer></Footer>
 </template>
 
-<style scoped>
+<style lang="scss">
+@use "styles/variables" as *;
 ul {
   list-style: none;
+}
+
+body {
+  background-color: $secondaryColor;
 }
 </style>

@@ -98,6 +98,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/variables" as *;
 .tech-thumb {
   height: 30px;
 }
