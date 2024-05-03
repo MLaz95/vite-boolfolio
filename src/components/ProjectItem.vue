@@ -22,7 +22,7 @@ export default {
         />
         <img
           v-else
-          src="/img/project-img-placeholder.svg"
+          src="/img/project-img-placeholder.jpg"
           :alt="'project ' + project.name + ' thumbnail'"
         />
 
@@ -31,22 +31,25 @@ export default {
         </h2>
 
         <div class="details">
-          
-            <h3 class="text-center fs-5" v-if="project.type">Type: {{ project.type.title }}</h3>
-            <!-- <div v-if="project.technologies">
+          <h3 class="text-center fs-5" v-if="project.type">
+            Type: {{ project.type.title }}
+          </h3>
+          <!-- <div v-if="project.technologies">
               <span
                 v-for="tech in project.technologies"
                 class="badge rounded-pill text-black"
                 >{{ tech.title }}</span
               >
             </div> -->
-            <div v-if="project.technologies" class="d-flex justify-content-center pb-3 gap-2">
+          <div
+            v-if="project.technologies"
+            class="d-flex justify-content-center pb-3 gap-2"
+          >
             <img
               v-for="tech in project.technologies"
               :src="'/img/tech-logos/' + tech.title + '.png'"
               class="tech-thumb"
-            >
-          
+            />
           </div>
         </div>
       </div>
@@ -55,7 +58,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 @use "../styles/variables" as *;
 
 .my_card {
@@ -72,7 +74,7 @@ export default {
     object-fit: cover;
   }
 
-  .tech-thumb{
+  .tech-thumb {
     height: 30px;
   }
 }

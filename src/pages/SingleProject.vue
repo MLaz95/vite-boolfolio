@@ -41,7 +41,7 @@ export default {
         <img
           v-else
           class="img-fluid mb-2"
-          src="/img/project-img-placeholder.svg"
+          src="/img/project-img-placeholder.jpg"
           :alt="'project ' + project.name + ' thumbnail'"
         />
         <table class="table w-100 mx-auto text-start">
